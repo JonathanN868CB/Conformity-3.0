@@ -5,18 +5,24 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:5171": "vite --port 5171",
     "build": "tsc -b && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
+    "lucide-react": "^0.511.0",
+    "motion": "^12.10.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@tailwindcss/vite": "^4.1.12",
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^4.3.1",
+    "tailwindcss": "^4.1.12",
     "typescript": "^5.6.2",
+    "tw-animate-css": "^1.3.8",
     "vite": "^5.4.8"
   }
 }

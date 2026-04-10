@@ -1,0 +1,115 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  --background: #06111e;
+  --foreground: #edf4ff;
+  --card: #091728;
+  --card-foreground: #edf4ff;
+  --popover: #0b1726;
+  --popover-foreground: #edf4ff;
+  --primary: #d4af37;
+  --primary-foreground: #0b1523;
+  --secondary: #15263b;
+  --secondary-foreground: #edf4ff;
+  --muted: #132033;
+  --muted-foreground: #9fb0c5;
+  --accent: #1b3557;
+  --accent-foreground: #f8fbff;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: rgba(195, 215, 239, 0.16);
+  --input: transparent;
+  --input-background: rgba(13, 25, 39, 0.75);
+  --switch-background: #5d728d;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #6fa7ff;
+  --radius: 0.875rem;
+  color-scheme: dark;
+}
+
+.dark {
+  --background: #06111e;
+  --foreground: #edf4ff;
+  --card: #091728;
+  --card-foreground: #edf4ff;
+  --popover: #0b1726;
+  --popover-foreground: #edf4ff;
+  --primary: #d4af37;
+  --primary-foreground: #0b1523;
+  --secondary: #15263b;
+  --secondary-foreground: #edf4ff;
+  --muted: #132033;
+  --muted-foreground: #9fb0c5;
+  --accent: #1b3557;
+  --accent-foreground: #f8fbff;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: rgba(195, 215, 239, 0.16);
+  --input: rgba(13, 25, 39, 0.75);
+  --ring: #6fa7ff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html,
+  body,
+  #root {
+    min-height: 100%;
+  }
+
+  html {
+    font-size: var(--font-size);
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    margin: 0;
+    font-family:
+      'Aileron',
+      'Segoe UI',
+      'Trebuchet MS',
+      sans-serif;
+    background-image:
+      radial-gradient(circle at 18% 20%, rgba(14, 165, 233, 0.16), transparent 28%),
+      radial-gradient(circle at 78% 75%, rgba(245, 158, 11, 0.16), transparent 26%),
+      linear-gradient(180deg, #040b14 0%, #08111f 38%, #091525 100%);
+  }
+
+  button,
+  input {
+    font: inherit;
+  }
+}
